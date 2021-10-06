@@ -66,6 +66,13 @@ function Registrasi() {
                     </a>
                   </li>
                 </ul>
+                <Link
+                  type="button"
+                  class="btn btn-info btn-lg"
+                  to="/registrasi"
+                >
+                  Registrasi
+                </Link>
               </div>
             </div>
           </nav>
