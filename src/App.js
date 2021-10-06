@@ -9,9 +9,10 @@ function App() {
     <Rounter>
       <div>
         <Switch>
-          <Route path="/home" exact component={Home} />
+          <Route path="/" exact component={Home} />
           <Route path="/cekData" exact component={cekData} />
           <Route path="/registrasi" exact component={Registrasi} />
+          <Route path="/home" exact component={Home} />
         </Switch>
       </div>
     </Rounter>

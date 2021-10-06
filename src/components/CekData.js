@@ -2,6 +2,7 @@ import react from "react";
 import logo from "./logo.png";
 import { render } from "@testing-library/react";
 import { Link } from "react-router-dom";
+import Home from "./cek-data/Home";
 
 function Registrasi() {
   render();
@@ -10,58 +11,78 @@ function Registrasi() {
       <div>
         {/* //header */}
         <header>
-          <nav class="navbar navbar-light bg-light shadow-sm">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
             <div class="container-fluid">
-              <Link class="navbar-brand" to="./home">
+              <a class="navbar-brand text-info" href="#">
                 <img
                   src={logo}
                   alt=""
                   width="80"
                   height="40"
-                  class="d-inline-block align-text-top"
+                  class="d-inline-block align-text-center"
                 />
-                PeduliDiriSendiri.com
-              </Link>
+                PeduliDiriSendiri
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active text-info"
+                      aria-current="page"
+                      href="#"
+                    >
+                      Beranda
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      Tentang
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      Cara Kerja
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      Syara Penggunaan
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      Kebijakan Privasi
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </nav>
         </header>
         {/* // end header */}
 
         {/* // body */}
-        <div class="container">
+        <div class="container position-absolute top-50 start-50 translate-middle">
           <div class="row">
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-              <Link
-                class="btn btn-secondary me-md-2"
-                type="button"
-                to="./registrasi"
-              >
-                Edit Data
-              </Link>
-              <Link class="btn btn-primary" type="button" to="./registrasi">
-                Daftar
-              </Link>
+            <div class="col-md-12 shadow-lg p-3 mb-5 bg-body rounded">
+              <div class="card start-center">
+                <div class="card-body text-center d-grid gap-4 col-6 mx-auto">
+                  <Home></Home>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div>
-            <h5>Cari</h5>
-            <form class="d-flex">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
-          </div>
-
-          <button class="btn btn-warning" type="submit">
-            Cetak sertifikat
-          </button>
         </div>
         {/* // end body */}
       </div>
