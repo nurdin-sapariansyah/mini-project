@@ -4,8 +4,8 @@ import { useState } from "react";
 
 const ListRakyat = (props) => {
   const GetRakyatBynik = gql`
-    query MyQuery($_eq: Int!) {
-      data_rakyat(where: { id: { _eq: $_eq } }) {
+    query MyQuery($_eq: numeric = "321384924000001") {
+      data_rakyat(where: { nik: { _eq: $_eq } }) {
         nama
         nik
         ket
@@ -53,7 +53,7 @@ const ListRakyat = (props) => {
           </button>
         </form>
         <table cellPadding="5px" cellSpacing="0" style={{ margin: "auto" }}>
-          {databyid?.anggota.map((item) => (
+          {databyid?.rakyat.map((item) => (
             <ListItem key={item.nik} query={item} />
           ))}
         </table>

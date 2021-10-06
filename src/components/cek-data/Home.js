@@ -7,7 +7,7 @@ const initialValue = [
   {
     id: uuidv4(),
     nama: "Yoga",
-    nik: 22,
+    nik: 321384924000001,
     ket: "Sudah Vaksin",
   },
   {
@@ -19,7 +19,7 @@ const initialValue = [
 ];
 
 function Home() {
-  const [data, setData] = useState(initialValue);
+  const [data] = useState(initialValue);
 
   return (
     <div>

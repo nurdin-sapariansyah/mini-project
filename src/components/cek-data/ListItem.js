@@ -1,6 +1,6 @@
 import "./Home.css";
 const ListItem = (props) => {
-  const { id, nama, nik, ket } = props.query;
+  const { nama, nik, ket } = props.query;
 
   return (
     <tr>
